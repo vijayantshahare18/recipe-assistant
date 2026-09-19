@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+faiss-cpu
+openai
+httpx
+pytest
+numpy
