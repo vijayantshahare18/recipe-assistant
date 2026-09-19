@@ -2,7 +2,7 @@ import React,{useEffect,useState} from 'react';
 import {createRoot} from 'react-dom/client';
 import {Heart,Plus,X,Home,CalendarDays,ScanLine,UserRound,MessageCircle,ShoppingBasket,ArrowLeft,Share2} from 'lucide-react';
 import './index.css';
-const API=import.meta.env.VITE_API_URL||'http://localhost:8000';
+const API=import.meta.env.VITE_API_URL||'https://recipe-assistant-sh2b.onrender.com';
 const basePrefs={diet:'Vegetarian',cuisine:'',calorie_limit:600,allergies:[],goal:'Maintenance'};
 function App(){
  const [screen,setScreen]=useState('home'),[ingredients,setIngredients]=useState(['onion','tomato','spinach']),[input,setInput]=useState(''),[prefs,setPrefs]=useState(basePrefs),[recipes,setRecipes]=useState([]),[selected,setSelected]=useState(null),[subs,setSubs]=useState(null),[plan,setPlan]=useState(null),[grocery,setGrocery]=useState(null),[chat,setChat]=useState([]),[message,setMessage]=useState(''),[loading,setLoading]=useState(false),[error,setError]=useState('');

@@ -90,7 +90,16 @@ def vec(ings):
     return local_vec(ings)
 
 app = FastAPI(title='RecipeMind API', version='0.4.0')
-app.add_middleware(CORSMiddleware, allow_origins=['http://localhost:5173','http://127.0.0.1:5173'], allow_methods=['*'], allow_headers=['*'])
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        'http://localhost:5173',
+        'http://127.0.0.1:5173',
+        'https://recipe-assistant-1.onrender.com'
+    ],
+    allow_methods=['*'],
+    allow_headers=['*']
+)
 
 class Prefs(BaseModel):
     ingredients: List[str] = Field(min_length=1)
